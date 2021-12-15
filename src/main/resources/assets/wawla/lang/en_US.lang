@@ -348,3 +348,71 @@ description.enchantment.msm.extinction=This enchantment will kill all mobs on th
 description.enchantment.railcraft.crowbar.destruction=This enchant is exclusively for crowbars. Deconstructs blocks in a wide area.
 description.enchantment.railcraft.crowbar.implosion=This enchant is exclusively for crowbars. Increases damage dealt to Creepers.
 description.enchantment.railcraft.crowbar.wrecking=This enchant is exclusively for crowbars. Increases damage (works the same as Sharpness).
+
+#OpenBlocks Enchantments
+description.enchantment.openblocks.explosive=When taking damage, Gunpowder will be consumed to create an explosion that damages mobs and blocks.
+description.enchantment.openblocks.flimflam=Brings "bad luck" to anything that attacks the player.
+description.enchantment.openblocks.laststand=When the user is at half a heart, instead of dying from the next blow it uses XP levels to absorb damage.
+
+#Forbidden Magic Enchantments
+description.enchantment.cluster=A Chameleon Pickaxe with the Fiery Core enchantment has a chance of dropping clusters when mining certain ores. Clusters are a lot purer than raw ore and can be smelted for the of the ore's normal smelting result. Higher levels of Fiery Core increase the chance of dropping clusters.
+description.enchantment.consuming=Any Cobblestone, Dirt, Gravel, or Netherrack mined by a Consuming tool will be destroyed instead of falling to the ground.
+description.enchantment.corrupting=The Corrupting enchant allows you to harvest Nether Shards without having to be in the Nether. A pickaxe enchanted with Corrupting will randomly corrupt harvested elemental shards, changing them into nether shards. The shards only seem susceptible while they are encased in infused stone, so corrupting a shard cluster will have no effect.
+description.enchantment.educational=You've created an enchantment to infuse a weapon with the very essence of knowledge and learning. Hammering such learning into monsters' heads will result in them dropping more experience than normal, depending on the level of enchantment.
+description.enchantment.greedy=Every time a Capitalist weapon slays a hostile creature, there's a chance to drop Emerald Fragment. If a Capitalist weapon is used to kill a villager, it will instead drop one of the villager's emeralds.
+description.enchantment.impact=A Chameleon Tools with Impact enchantment mines a 3 x 3 area of blocks instead of just one, making exploratory mining faster and flattening areas much easier.
+description.enchantment.voidtouched=The Voidtouched enchant gives Chameleon Tool the same regenerating quality as Void Tools.
+description.enchantment.wrath=The Wrath enchantment increases the offensive power of a weapon, but is still compatible with Sharpness, Bane of Arthropods and Smite.
+
+#BiblioCraft Enchantments
+description.Eternal Compass=When the player dies, they will spawn with an Eternal Compass which will lead them back to their death point.
+description.Reading=When looking at items in BiblioCraft blocks in the world their hover text will be displayed.
+
+#Witching Gadgets Enchantments
+description.enchantment.wg.backstab=Items enchanted with Backstabbing do additional 20% damage per level when attacking from behind, plus another 40% when the target is not aware of you.
+description.enchantment.wg.gemstoneBrittle=Infuse a witchery cut gem with brittleness.
+description.enchantment.wg.gemstonePotency=Infuse a witchery cut gem to make it more potent.
+description.enchantment.wg.invisibleGear=The first level of this enchantment will make your gear translucent when you are invsible yourself, the second level will make it permanently invisible.
+description.enchantment.wg.rideProtect=Moving around is incredibly difficult when someone is piggyback-riding you. Enchanting your helmet with this repulsion spell should fix that problem. Everyone who tries to jump upon you will get thrown off and damaged.
+description.enchantment.wg.soulbound=When the player dies the item/tool/armor will be kept in the inventory and not drop on the ground.
+description.enchantment.wg.stealth=Applying this enchantment to your boots or leggings will give you a chance of staying undetected while you are crouching. The chance rises by 10% with every level, but is diminished by 10% if you are in view of the target in question. Should you be discovered, all enemies in a 5 block radius will be notified.
+description.enchantment.wg.unveiling=This enchantment can be applied to the Goggles of Revealing or other headgear of the same function. While wearing the enchanted item, you will be able to see creatures with the invisibility buff. Furthermore, the Translucency enchantment is rendered ineffective when used by others and users of the spectral mantle are shown more clearly.
+
+#Thaumic Exploration Enchantments
+description.enchantment.binding=At level I, slows mobs hit for a few seconds. At level II, prevents Endermen from teleporting and Creepers from exploding for a few seconds.
+description.enchantment.disarm=Attacked enemies have a chance to drop their weapons, does not work on other players. Note: The Thorns enchantment from Vanilla also triggers this.
+description.enchantment.nightVision=Gain a permanent Nightvision potion effect while holding an item with this enchantment.
+
+#EnderIO Enchantments
+description.enchantment.autosmelt=Any block mined by an item enchanted with this will have its drop instantly smelted as if processed by a Furnace.
+description.enchantment.xpboost=This enchantment increases the amount of Experience dropped by killing mobs or players or by breaking blocks by a percentage. 
+description.enchantment.enderio.soulBound=When the player dies the item/tool/armor will be kept in the inventory and not drop on the ground.
+
+#EnderZoo Enchantments
+description.enchantment.enderzoo.witherArrow=Applies Wither effect on hit for 5 seconds.
+description.enchantment.enderzoo.witherWeapon=Applies Wither effect on hit for 5 seconds.
+
+#BattleGear Enchantments
+description.enchantment.bash.weightless=Reduce the stamina loss per shield bash.
+description.enchantment.bash.power=Increase the push force on shield bash (further repulse the opponent).
+description.enchantment.bash.damage=Adds damage to a shield bash.
+description.enchantment.shield.usage=Reduce the stamina lost on shield block.
+description.enchantment.shield.recover=Increase the stamina recovery rate when holding the shield, but not when blocking.
+description.enchantment.bow.loot=Adds a chance to increase loot on killing with a bow.
+description.enchantment.bow.charge=Lower charge time for the bow, without effecting the FOV.
+
+#Thaumic Bases Enchantments
+description.enchantment.elderKnowledge=Chance to recieve knowledge from fallen mobs.
+description.enchantment.eldritchBane=Deal more damage to eldritch creatures.
+description.enchantment.magicTouch=Gain more Aspect Orbs from killed enemies.
+description.enchantment.tainted=Inflict taint poison on attacked enemies.
+description.enchantment.vaporising=Gain Crystalized Essentia of slain mobs.
+
+#Misc. Enchantments
+description.enchant.cofh.holding=Increases the amount of slots (8-9 per level) of a strongbox or satchel.
+description.enchant.cofh.multishot=Makes bows shoot multiple arrows at 1 arrow cost.
+description.enchantment.draconicevolution.reaperEnchant=Killing a mob has a chance of dropping a corresponding Mob Soul. This bonus chance stacks with the native chance to drop a soul of the various Draconic Evolution weapons.
+description.enchantment.damage.endermen=Deal more damage to Ender mobs and prevent them from teleporting.
+description.enchantment.damage.radioactivity=Add radioactivity to your weapon or armor causing mobs or players to suffer.
+description.gadomancy.enchantment.revealer=An enchantment for your helmet. When used, it makes nodes visible, just like Thaumcraft's Goggles of Revealing.
+description.enchantment.projectred.expansion.fuel_efficiency=Better fuel efficiency for your jetpack.
