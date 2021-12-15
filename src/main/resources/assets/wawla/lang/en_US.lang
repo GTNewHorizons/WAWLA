@@ -23,7 +23,6 @@ tooltip.wawla.secondary=Second Effect
 tooltip.wawla.shiftEnch=Hold the Sneak key for Enchantment Description
 tooltip.wawla.blockLevel=Required Tier
 tooltip.wawla.amount=Amount
-tooltip.wawla.item=Item
 tooltip.wawla.lightLevel=Light Level
 tooltip.wawla.sit=Sitting
 tooltip.wawla.birth=Cooldown
@@ -42,7 +41,6 @@ tooltip.wawla.sleepable=Sleepable
 tooltip.wawla.hardness=Hardness
 tooltip.wawla.resistance=Blast Resistance
 tooltip.wawla.enchPower=Enchantment Power
-
 
 #Fixed/Missing Strings
 tile.null.name=Unnamed Block, report to mod author.
@@ -190,7 +188,6 @@ description.villager.profession.rftools.rftoolsvillager=RFTools Engineer
 description.villager.profession.forbidden.heretic=Heretic
 description.villager.profession.agricraft.villager=Agricraft Farmer
 
-
 #Jewelrycraft Tooltips
 tooltip.wawla.jewelry.molten=Molten
 tooltip.wawla.jewelry.unmelted=Unmelted
@@ -202,7 +199,6 @@ option.wawla.jewelrycraft.showMoltenAmount=Molten Amounts
 option.wawla.jewelrycraft.showMetalAmount=Unmelted Amounts
 option.wawla.jewelrycraft.showMeltTime=Melting Time
 option.wawla.jewelrycraft.showCooling=Cooling Time
-
 
 #Tinkers Construct Tooltips
 tooltip.wawla.tinkers.dryness=Dryness
@@ -347,3 +343,8 @@ description.enchantment.msm.shadows=This enchantment will blind the target mob f
 description.enchantment.msm.decay=This enchantment will apply the wither effect to the target mob for just under 4 seconds.
 description.enchantment.msm.stealth=This enchantment will cause the player to become invisible when activated. Unlike the potion of invisibility this effect will not give off particles and has no time limit or duration. To toggle this on or off simply right click with the sword. It's worth noting that swords and armor will still be visible while this effect is enabled.
 description.enchantment.msm.extinction=This enchantment will kill all mobs on the map that are an instance of the target mob. This can be used on boats to kill all boats in the world and can be used to manage entities in the world. This effect will not target players.
+
+#Railcraft Enchantments
+description.enchantment.railcraft.crowbar.destruction=This enchant is exclusively for crowbars. Deconstructs blocks in a wide area.
+description.enchantment.railcraft.crowbar.implosion=This enchant is exclusively for crowbars. Increases damage dealt to Creepers.
+description.enchantment.railcraft.crowbar.wrecking=This enchant is exclusively for crowbars. Increases damage (works the same as Sharpness).
