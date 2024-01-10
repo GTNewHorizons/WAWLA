@@ -2,11 +2,6 @@ package net.darkhax.wawla.addons.generic;
 
 import java.util.List;
 
-import mcp.mobius.waila.api.IWailaConfigHandler;
-import mcp.mobius.waila.api.IWailaDataAccessor;
-import mcp.mobius.waila.api.IWailaDataProvider;
-import mcp.mobius.waila.api.IWailaRegistrar;
-
 import net.darkhax.wawla.addons.tinkersconstruct.AddonTinkersTiles;
 import net.darkhax.wawla.util.Utilities;
 import net.minecraft.block.Block;
@@ -19,6 +14,11 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import mcp.mobius.waila.api.IWailaConfigHandler;
+import mcp.mobius.waila.api.IWailaDataAccessor;
+import mcp.mobius.waila.api.IWailaDataProvider;
+import mcp.mobius.waila.api.IWailaRegistrar;
 
 public class AddonGenericTiles implements IWailaDataProvider {
 
