@@ -3,7 +3,6 @@ package net.darkhax.wawla.addons.generic;
 import java.util.List;
 
 import net.darkhax.wawla.util.Utilities;
-import net.minecraft.client.entity.EntityOtherPlayerMP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.passive.EntityAnimal;
