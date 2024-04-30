@@ -3,10 +3,12 @@ package net.darkhax.wawla.addons.generic;
 import java.util.List;
 
 import net.darkhax.wawla.util.Utilities;
+import net.minecraft.client.entity.EntityOtherPlayerMP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityTameable;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -102,9 +104,10 @@ public class AddonGenericEntities implements IWailaEntityProvider {
 
     @Override
     public NBTTagCompound getNBTData(EntityPlayerMP player, Entity entity, NBTTagCompound tag, World world) {
+        if (entity == null) return tag;
+        if (entity instanceof EntityPlayer) return tag;
 
-        if (entity != null) entity.writeToNBT(tag);
-
+        entity.writeToNBT(tag);
         return tag;
     }
 
