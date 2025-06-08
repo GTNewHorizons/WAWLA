@@ -151,8 +151,7 @@ description.enchantment.protect.fire=Este encantamiento reduce el daño tomado d
 
 description.enchantment.protect.fall=Este encantamiento reduce el daño hecho por caídas de lugares altos, también reduce el daño hecho cuando se usan las Perlas del Ender. Este encantamiento solamente puede ser aplicado a botas.
 
-description.enchantment.protect.explosion=Este encantamiento reduce el daño tomado de explosiones como TNT o Creepers. Este encantamiento también reduce el empuje de las explosiones sobre el portador. Este 
-encantamiento puede ser aplicado a todos los tipos de armadura.
+description.enchantment.protect.explosion=Este encantamiento reduce el daño tomado de explosiones como TNT o Creepers. Este encantamiento también reduce el empuje de las explosiones sobre el portador. Este encantamiento puede ser aplicado a todos los tipos de armadura.
 
 description.enchantment.protect.projectile=Este encantamiento reduce el daño tomado de todos los proyectiles, como flechas y cargas de fuego. Este encantamiento puede ser aplicado a todos los tipos de armadura.
 
