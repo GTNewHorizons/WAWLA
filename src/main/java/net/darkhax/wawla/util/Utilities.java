@@ -14,7 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.UsernameCache;
@@ -22,7 +21,6 @@ import net.minecraftforge.common.UsernameCache;
 import org.apache.commons.lang3.SystemUtils;
 import org.apache.commons.lang3.text.WordUtils;
 
-import cpw.mods.fml.common.registry.VillagerRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -304,38 +302,10 @@ public class Utilities {
     }
 
     /**
-     * Lists of names for the vanilla villagers.
-     */
-    @SideOnly(Side.CLIENT)
-    private static String[] vanillaVillagers = { "farmer", "librarian", "priest", "blacksmith", "butcher" };
-
-    /**
      * An accessible field which can be used to provide the client-side value of the current block damage. Initialized
      * through the client proxy during preInit.
      */
     public static Field currentBlockDamage;
-
-    /**
-     * Retrieves a unique string related to the texture name of a villager. This allows for villagers to be
-     * differentiated based on their profession rather than their ID.
-     * 
-     * @param id : The ID of the villager being looked up.
-     * @return String: The texture name, minus file path and extension.
-     */
-    @SideOnly(Side.CLIENT)
-    public static String getVillagerName(int id) {
-
-        ResourceLocation skin = VillagerRegistry.getVillagerSkin(id, null);
-        return (id >= 0
-                && id <= 4)
-                        ? vanillaVillagers[id]
-                        : (skin != null)
-                                ? skin.getResourceDomain() + "."
-                                        + skin.getResourcePath().substring(
-                                                skin.getResourcePath().lastIndexOf("/") + 1,
-                                                skin.getResourcePath().length() - 4)
-                                : "misingno";
-    }
 
     /**
      * A client sided method used to retrieve the progression of the block currently being mined by the player. This

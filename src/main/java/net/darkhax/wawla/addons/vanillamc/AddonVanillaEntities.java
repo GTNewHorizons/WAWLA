@@ -16,6 +16,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import com.gtnewhorizon.gtnhlib.client.VillagerNames;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import mcp.mobius.waila.api.IWailaConfigHandler;
@@ -80,7 +82,7 @@ public class AddonVanillaEntities implements IWailaEntityProvider {
 
                 EntityVillager villager = (EntityVillager) entity;
                 profession = StatCollector.translateToLocal(
-                        "description.villager.profession." + Utilities.getVillagerName(villager.getProfession()));
+                        "description.villager.profession." + VillagerNames.getVillagerName(villager.getProfession()));
             }
 
             if (entity instanceof EntityZombie) {
