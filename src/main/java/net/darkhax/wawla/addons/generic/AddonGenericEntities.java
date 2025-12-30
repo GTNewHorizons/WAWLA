@@ -14,6 +14,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import cpw.mods.fml.common.Loader;
+import iguanaman.hungeroverhaul.config.IguanaConfig;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaEntityAccessor;
 import mcp.mobius.waila.api.IWailaEntityProvider;
@@ -69,16 +71,22 @@ public class AddonGenericEntities implements IWailaEntityProvider {
         if (entity instanceof EntityAnimal) {
 
             EntityAnimal animal = (EntityAnimal) entity;
+            float breedingTimeoutMultiplier = 1.0F;
+            float childDurationMultiplier = 1.0F;
+            if (Loader.isModLoaded("HungerOverhaul")) {
+                breedingTimeoutMultiplier = IguanaConfig.breedingTimeoutMultiplier;
+                childDurationMultiplier = IguanaConfig.breedingTimeoutMultiplier;
+            }
 
             if (cfg.getConfig(CONFIG_AGE) && animal.isChild() && animal.getGrowingAge() != 0) tip.add(
                     StatCollector.translateToLocal("tooltip.wawla.age") + ": "
-                            + ((animal.getGrowingAge() / 20) * -1)
+                            + ((animal.getGrowingAge() / 20) * -1 * childDurationMultiplier)
                             + " "
                             + StatCollector.translateToLocal("tooltip.wawla.seconds"));
 
             else if (cfg.getConfig(CONFIG_BIRTH_COOLDOWN) && animal.getGrowingAge() != 0) tip.add(
                     StatCollector.translateToLocal("tooltip.wawla.birth") + ": "
-                            + ((animal.getGrowingAge() / 20))
+                            + ((animal.getGrowingAge() / 20) * breedingTimeoutMultiplier)
                             + " "
                             + StatCollector.translateToLocal("tooltip.wawla.seconds"));
         }
