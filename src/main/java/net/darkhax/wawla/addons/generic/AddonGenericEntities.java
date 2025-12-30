@@ -80,13 +80,13 @@ public class AddonGenericEntities implements IWailaEntityProvider {
 
             if (cfg.getConfig(CONFIG_AGE) && animal.isChild() && animal.getGrowingAge() != 0) tip.add(
                     StatCollector.translateToLocal("tooltip.wawla.age") + ": "
-                            + ((animal.getGrowingAge() / 20) * -1 * childDurationMultiplier)
+                            + (int) (animal.getGrowingAge() / 20.0F * -1.0F * childDurationMultiplier)
                             + " "
                             + StatCollector.translateToLocal("tooltip.wawla.seconds"));
 
             else if (cfg.getConfig(CONFIG_BIRTH_COOLDOWN) && animal.getGrowingAge() != 0) tip.add(
                     StatCollector.translateToLocal("tooltip.wawla.birth") + ": "
-                            + ((animal.getGrowingAge() / 20) * breedingTimeoutMultiplier)
+                            + (int) (animal.getGrowingAge() / 20.0F * breedingTimeoutMultiplier)
                             + " "
                             + StatCollector.translateToLocal("tooltip.wawla.seconds"));
         }
