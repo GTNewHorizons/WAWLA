@@ -104,7 +104,6 @@ public class Utilities {
      */
     public static double round(double value, int places) {
 
-        if (value == null) return;
         if (places == 0) return value;
         
         if (value >= 0 && places > 0) {
