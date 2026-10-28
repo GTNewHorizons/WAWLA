@@ -81,6 +81,8 @@ public class Utilities {
      */
     public static Enchantment[] getEnchantmentsFromStack(ItemStack stack, boolean stored) {
 
+        if (stack == null) return new Enchantment[0];
+        
         prepareStackCompound(stack);
         String tagName = (stored) ? "StoredEnchantments" : "ench";
         NBTTagCompound tag = stack.stackTagCompound;
@@ -102,6 +104,9 @@ public class Utilities {
      */
     public static double round(double value, int places) {
 
+        if (value == null) return 
+        if (places == null) return value
+        
         if (value >= 0 && places > 0) {
 
             BigDecimal bd = new BigDecimal(value);
@@ -120,17 +125,14 @@ public class Utilities {
      */
     public static String[] generateElementArray(Class enumClass) {
 
-        if (enumClass != null) {
+        if (enumClass == null) return null;
 
-            Object[] constants = enumClass.getEnumConstants();
-            String[] elements = new String[constants.length];
+        Object[] constants = enumClass.getEnumConstants();
+        String[] elements = new String[constants.length];
 
-            for (int i = 0; i < constants.length; i++) elements[i] = constants[i].toString();
+        for (int i = 0; i < constants.length; i++) elements[i] = constants[i].toString();
 
-            return elements;
-        }
-
-        return null;
+        return elements;
     }
 
     /**
@@ -144,7 +146,7 @@ public class Utilities {
 
         ItemStack[] inventory = null;
 
-        if (tag.hasKey("Items")) {
+        if (tag != null && invSize != null && tag.hasKey("Items")) {
 
             NBTTagList list = tag.getTagList("Items", 10);
             inventory = new ItemStack[invSize];
@@ -183,6 +185,7 @@ public class Utilities {
      */
     public static boolean compareTileEntityByClass(TileEntity entity, Class teClass) {
 
+        if (entity == null) return false
         return compareByClass(entity.getClass(), teClass);
     }
 
@@ -206,6 +209,7 @@ public class Utilities {
      */
     public static String upperCase(String string) {
 
+        if (string == null) return null
         return Character.toString(string.charAt(0)).toUpperCase() + string.substring(1);
     }
 
@@ -277,6 +281,7 @@ public class Utilities {
      */
     public static boolean canPlayerSleep(EntityPlayer player) {
 
+        if (player == null) return false
         return (!player.isPlayerSleeping() && player.isEntityAlive()
                 && player.worldObj.getWorldTime() > 12541
                 && player.worldObj.getWorldTime() < 23458);
