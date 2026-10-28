@@ -104,8 +104,8 @@ public class Utilities {
      */
     public static double round(double value, int places) {
 
-        if (value == null) return 
-        if (places == null) return value
+        if (value == null) return;
+        if (places == 0) return value;
         
         if (value >= 0 && places > 0) {
 
@@ -146,7 +146,7 @@ public class Utilities {
 
         ItemStack[] inventory = null;
 
-        if (tag != null && invSize != null && tag.hasKey("Items")) {
+        if (tag != null && invSize > 0 && tag.hasKey("Items")) {
 
             NBTTagList list = tag.getTagList("Items", 10);
             inventory = new ItemStack[invSize];
@@ -185,7 +185,7 @@ public class Utilities {
      */
     public static boolean compareTileEntityByClass(TileEntity entity, Class teClass) {
 
-        if (entity == null) return false
+        if (entity == null) return false;
         return compareByClass(entity.getClass(), teClass);
     }
 
@@ -209,7 +209,7 @@ public class Utilities {
      */
     public static String upperCase(String string) {
 
-        if (string == null) return null
+        if (string == null) return null;
         return Character.toString(string.charAt(0)).toUpperCase() + string.substring(1);
     }
 
@@ -281,7 +281,7 @@ public class Utilities {
      */
     public static boolean canPlayerSleep(EntityPlayer player) {
 
-        if (player == null) return false
+        if (player == null) return false;
         return (!player.isPlayerSleeping() && player.isEntityAlive()
                 && player.worldObj.getWorldTime() > 12541
                 && player.worldObj.getWorldTime() < 23458);
