@@ -23,7 +23,7 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
     @Override
     public Entity getWailaOverride(IWailaEntityAccessor data, IWailaConfigHandler cfg) {
 
-        return (data != null) ? data.getEntity() : null;
+        return data.getEntity();
     }
 
     @Override
