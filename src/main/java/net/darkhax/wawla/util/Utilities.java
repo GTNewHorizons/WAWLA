@@ -82,7 +82,7 @@ public class Utilities {
     public static Enchantment[] getEnchantmentsFromStack(ItemStack stack, boolean stored) {
 
         if (stack == null) return new Enchantment[0];
-        
+
         prepareStackCompound(stack);
         String tagName = (stored) ? "StoredEnchantments" : "ench";
         NBTTagCompound tag = stack.stackTagCompound;
@@ -105,7 +105,7 @@ public class Utilities {
     public static double round(double value, int places) {
 
         if (places == 0) return value;
-        
+
         if (value >= 0 && places > 0) {
 
             BigDecimal bd = new BigDecimal(value);
