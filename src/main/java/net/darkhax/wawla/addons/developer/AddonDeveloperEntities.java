@@ -37,6 +37,9 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
     public List<String> getWailaBody(Entity entity, List<String> tip, IWailaEntityAccessor data,
             IWailaConfigHandler cfg) {
 
+        if (tip == null) return List.of();
+        if (data == null) return tip;
+        
         boolean isKeySprinting = Minecraft.getMinecraft().gameSettings
                 .isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindSprint);
 
@@ -57,15 +60,18 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
     @Override
     public NBTTagCompound getNBTData(EntityPlayerMP player, Entity entity, NBTTagCompound tag, World world) {
 
-        if (entity != null) entity.writeToNBT(tag);
+        if (entity != null && tag != null) entity.writeToNBT(tag);
 
         return tag;
     }
 
     public static void registerAddon(IWailaRegistrar register) {
 
-        AddonDeveloperEntities dataProvider = new AddonDeveloperEntities();
-        register.registerBodyProvider(dataProvider, Entity.class);
-        register.registerNBTProvider(dataProvider, Entity.class);
+        if (register != null) {
+            
+            AddonDeveloperEntities dataProvider = new AddonDeveloperEntities();
+            register.registerBodyProvider(dataProvider, Entity.class);
+            register.registerNBTProvider(dataProvider, Entity.class);
+        }
     }
 }
