@@ -1,8 +1,8 @@
 // Add your dependencies here
 
 dependencies {
-    api('com.github.GTNewHorizons:waila:1.9.15:dev')
-    implementation("com.github.GTNewHorizons:GTNHLib:0.8.41:dev")
-    compileOnly("com.github.GTNewHorizons:HungerOverhaul:1.1.0-GTNH:dev") { transitive = false }
+    api('com.github.GTNewHorizons:waila:1.19.34:dev')
+    implementation("com.github.GTNewHorizons:GTNHLib:0.11.54:dev")
+    compileOnly rfg.deobf("curse.maven:hunger-overhaul-224476:2332505")
 
 }
