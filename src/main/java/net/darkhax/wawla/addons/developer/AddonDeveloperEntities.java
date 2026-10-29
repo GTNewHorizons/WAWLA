@@ -37,8 +37,8 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
     public List<String> getWailaBody(Entity entity, List<String> tip, IWailaEntityAccessor data,
             IWailaConfigHandler cfg) {
 
-        if (tip == null) return new List.of()
-        if (data == null) return tip
+        if (tip == null) return new List.of();
+        if (data == null) return tip;
         
         boolean isKeySprinting = Minecraft.getMinecraft().gameSettings
                 .isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindSprint);
