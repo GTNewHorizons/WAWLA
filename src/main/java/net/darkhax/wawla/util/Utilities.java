@@ -81,7 +81,7 @@ public class Utilities {
      */
     public static Enchantment[] getEnchantmentsFromStack(ItemStack stack, boolean stored) {
 
-        if (stack == null) return new Enchantment[0];
+        if (stack == null) return null;
 
         prepareStackCompound(stack);
         String tagName = (stored) ? "StoredEnchantments" : "ench";
@@ -143,24 +143,23 @@ public class Utilities {
      */
     public static ItemStack[] getInventoryStacks(NBTTagCompound tag, int invSize) {
 
-        ItemStack[] inventory = null;
+        if (tag == null && invSize <= 0 && !tag.hasKey("Items"))
+            return null;
 
-        if (tag != null && invSize > 0 && tag.hasKey("Items")) {
+        NBTTagList list = tag.getTagList("Items", 10);
+        ItemStack[] inventory = new ItemStack[invSize];
 
-            NBTTagList list = tag.getTagList("Items", 10);
-            inventory = new ItemStack[invSize];
+        for (int i = 0; i < list.tagCount(); i++) {
 
-            for (int i = 0; i < list.tagCount(); i++) {
-
-                if (!(i > list.tagCount())) {
-
-                    NBTTagCompound currentTag = list.getCompoundTagAt(i);
-                    inventory[(int) currentTag.getByte("Slot")] = ItemStack.loadItemStackFromNBT(currentTag);
-                }
-            }
+            NBTTagCompound currentTag = list.getCompoundTagAt(i);
+            int slot = currentTag.getByte("Slot") & 0xFF;
+            
+            if (slot < invSize)
+                inventory[slot] = ItemStack.loadItemStackFromNBT(currentTag);
         }
 
         return inventory;
+
     }
 
     /**
