@@ -81,6 +81,8 @@ public class Utilities {
      */
     public static Enchantment[] getEnchantmentsFromStack(ItemStack stack, boolean stored) {
 
+        if (stack == null) return null;
+
         prepareStackCompound(stack);
         String tagName = (stored) ? "StoredEnchantments" : "ench";
         NBTTagCompound tag = stack.stackTagCompound;
@@ -102,6 +104,8 @@ public class Utilities {
      */
     public static double round(double value, int places) {
 
+        if (places == 0) return value;
+
         if (value >= 0 && places > 0) {
 
             BigDecimal bd = new BigDecimal(value);
@@ -120,17 +124,14 @@ public class Utilities {
      */
     public static String[] generateElementArray(Class enumClass) {
 
-        if (enumClass != null) {
+        if (enumClass == null) return null;
 
-            Object[] constants = enumClass.getEnumConstants();
-            String[] elements = new String[constants.length];
+        Object[] constants = enumClass.getEnumConstants();
+        String[] elements = new String[constants.length];
 
-            for (int i = 0; i < constants.length; i++) elements[i] = constants[i].toString();
+        for (int i = 0; i < constants.length; i++) elements[i] = constants[i].toString();
 
-            return elements;
-        }
-
-        return null;
+        return elements;
     }
 
     /**
@@ -142,24 +143,21 @@ public class Utilities {
      */
     public static ItemStack[] getInventoryStacks(NBTTagCompound tag, int invSize) {
 
-        ItemStack[] inventory = null;
+        if (tag == null && invSize <= 0 && !tag.hasKey("Items")) return null;
 
-        if (tag.hasKey("Items")) {
+        NBTTagList list = tag.getTagList("Items", 10);
+        ItemStack[] inventory = new ItemStack[invSize];
 
-            NBTTagList list = tag.getTagList("Items", 10);
-            inventory = new ItemStack[invSize];
+        for (int i = 0; i < list.tagCount(); i++) {
 
-            for (int i = 0; i < list.tagCount(); i++) {
+            NBTTagCompound currentTag = list.getCompoundTagAt(i);
+            int slot = currentTag.getByte("Slot") & 0xFF;
 
-                if (!(i > list.tagCount())) {
-
-                    NBTTagCompound currentTag = list.getCompoundTagAt(i);
-                    inventory[(int) currentTag.getByte("Slot")] = ItemStack.loadItemStackFromNBT(currentTag);
-                }
-            }
+            if (slot < invSize) inventory[slot] = ItemStack.loadItemStackFromNBT(currentTag);
         }
 
         return inventory;
+
     }
 
     /**
@@ -183,6 +181,7 @@ public class Utilities {
      */
     public static boolean compareTileEntityByClass(TileEntity entity, Class teClass) {
 
+        if (entity == null) return false;
         return compareByClass(entity.getClass(), teClass);
     }
 
@@ -206,6 +205,7 @@ public class Utilities {
      */
     public static String upperCase(String string) {
 
+        if (string == null) return null;
         return Character.toString(string.charAt(0)).toUpperCase() + string.substring(1);
     }
 
@@ -277,6 +277,7 @@ public class Utilities {
      */
     public static boolean canPlayerSleep(EntityPlayer player) {
 
+        if (player == null) return false;
         return (!player.isPlayerSleeping() && player.isEntityAlive()
                 && player.worldObj.getWorldTime() > 12541
                 && player.worldObj.getWorldTime() < 23458);
