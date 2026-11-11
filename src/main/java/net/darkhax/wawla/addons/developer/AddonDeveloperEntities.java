@@ -1,7 +1,7 @@
 package net.darkhax.wawla.addons.developer;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 import net.darkhax.wawla.util.Utilities;
 import net.minecraft.client.Minecraft;
@@ -40,7 +40,7 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
 
         if (tip == null) return new ArrayList<>();
         if (data == null) return tip;
-        
+
         boolean isKeySprinting = Minecraft.getMinecraft().gameSettings
                 .isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindSprint);
 
@@ -69,7 +69,7 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
     public static void registerAddon(IWailaRegistrar register) {
 
         if (register != null) {
-            
+
             AddonDeveloperEntities dataProvider = new AddonDeveloperEntities();
             register.registerBodyProvider(dataProvider, Entity.class);
             register.registerNBTProvider(dataProvider, Entity.class);
