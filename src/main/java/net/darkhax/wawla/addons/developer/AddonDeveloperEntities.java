@@ -1,6 +1,7 @@
 package net.darkhax.wawla.addons.developer;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import net.darkhax.wawla.util.Utilities;
 import net.minecraft.client.Minecraft;
@@ -37,7 +38,7 @@ public class AddonDeveloperEntities implements IWailaEntityProvider {
     public List<String> getWailaBody(Entity entity, List<String> tip, IWailaEntityAccessor data,
             IWailaConfigHandler cfg) {
 
-        if (tip == null) return List.of();
+        if (tip == null) return new ArrayList<>();
         if (data == null) return tip;
         
         boolean isKeySprinting = Minecraft.getMinecraft().gameSettings
